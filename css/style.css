@@ -68,6 +68,37 @@ a:hover {
   color: var(--accent);
 }
 
+.text-accent {
+  color: var(--accent);
+}
+
+.hero-simple {
+  background-color: var(--bg-panel);
+  padding: 6rem 0;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 4vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+}
+
+.hero-copy {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.btn-pink {
+  background-color: #ff3b97;
+  border-color: #ff3b97;
+  color: #fff;
+}
+
+.btn-pink:hover {
+  background-color: #e53284;
+  border-color: #e53284;
+}
+
 
 .theme-toggle {
   background: none;
