@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        :root {
+            --accent: #ff0a9d;
+        }
+
+        .about-section {
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 4rem 0;
+            border-left: 4px solid var(--accent);
+        }
+
+        .about-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-header {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 300;
+            font-size: clamp(2rem, 3vw, 3.5rem);
+            margin-bottom: 1rem;
+            color: var(--accent);
+            box-shadow: 0 4px 6px rgba(231, 5, 129, 0.1);
+            box-shadow: 0 6px 8px rgba(246, 1, 164, 0.15);
+        }
+
+        .about-copy {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .about-image {
+            margin-top: 2rem;
+            max-width: 200px;
+            border-radius: 50%;
+        }
+        .about-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <section class="about-section">
+        <div class="about-container">
+            <h1 class="about-header">About Me</h1>
+            <p class="about-copy">
+                I'm Stacey Moraa, a passionate web developer and designer
+                I am a student in Strathmore University pursuing a degree in Bachelor of Business Information Technology. I have a strong interest in web development and design, and I am constantly learning and improving my skills in these areas. 
+                I am excited to share my work and projects with you through this portfolio website.
+            </p>
+            <div class="about-image">
+                <img src="images/profile.jpg" alt="Stacey Moraa">
+            </div>
+        </div>
+    </section>
+
+    
+</body>
+</html>
