@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY HOBBIES</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="js/script.js">
+</head>
+<style>
+    .hobbies-header {
+        text-align: center;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: bold;
+        font-family: cascade, sans-serif;
+    }
+    .hobbies-copy {
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: normal;
+        font-family: cascade, sans-serif;
+    }
+    .hobbies-list {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+    .hobbies-list li {
+        margin-bottom: 10px;
+    }
+    .btn {
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  background-color: #5b66e4;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero h1,
+.hero .lead-text,
+.hero-cta,
+.profile-frame {
+  opacity: 0;
+  animation: fadeUp 0.9s ease forwards;
+}
+
+.hero h1 { animation-delay: 0.2s; }
+.hero .lead-text { animation-delay: 0.35s; }
+.hero-cta { animation-delay: 0.55s; }
+.profile-frame { animation-delay: 0.8s; }
+
+nav a {
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+nav a:hover {
+  transform: translateY(-2px);
+}
+</style>
+<body>
+    <h1 class="hobbies-header">My Hobbies</h1>
+    <p class="hobbies-copy">
+        In my free time, I enjoy exploring various hobbies that allow me to relax and express my creativity. Some of my favorite hobbies include:
+    </p>
+    <ul class="hobbies-list">
+        <li>Reading: I love getting lost in a good book, whether it's fiction, non-fiction, or self-improvement literature.</li>
+        <img src="C:\Users\stace\OneDrive - Strathmore University\WEB DEV PROJECT\web-dev-project\images\Screenshot 2026-06-20 222738.png" alt="Reading" srcset=" ">
+        <li>Photography: Capturing moments and landscapes through photography is a passion of mine.</li>
+        <img src="C:\Users\stace\OneDrive - Strathmore University\WEB DEV PROJECT\web-dev-project\images\Screenshot 2026-06-20 222950.png" alt="Photography" srcset=" ">
+        <li>Traveling: Exploring new places and experiencing different cultures is something I find incredibly enriching.</li>
+        <img src="C:\Users\stace\OneDrive - Strathmore University\WEB DEV PROJECT\web-dev-project\images\Screenshot 2026-06-20 223149.png" alt="Traveling" srcset=" ">
+        <li>Cooking: I enjoy experimenting with new recipes and cooking delicious meals for myself and my loved ones.</li>
+        <img src="C:\Users\stace\OneDrive - Strathmore University\WEB DEV PROJECT\web-dev-project\images\Screenshot 2026-06-20 223304.png" alt="Cooking" srcset=" ">
+        <li>Gaming: Playing video games is a fun way for me to unwind and challenge myself.</li>
+        <img src="C:\Users\stace\OneDrive - Strathmore University\WEB DEV PROJECT\web-dev-project\images\Screenshot 2026-06-20 223349.png" alt="Gaming" srcset=" ">
+    </ul>
+    <button class="btn btn-primary" onclick="window.location.href='index.html'">Back to Home</button>
+    <button class="btn btn-primary" onclick="window.location.href='about.html'">back</button>
+</body>
+</html>
