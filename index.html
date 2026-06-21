@@ -13,6 +13,9 @@
   <button id="themeTogglebtn" class="themeToggle" aria-label="Toggle dark mode">
     <span class="theme-icon"></span>
   </button>
+  <div class="startClock">
+    <span id="clock"></span>
+  </div>
   <h1 class="hero-header">Welcome to my Portfolio</h1>
 </header>
   <nav>
@@ -42,14 +45,6 @@
             <a href="index.html" class="btn btn-outline-accent">Back to Home</a>
             <a href="work.html" class="btn btn-outline-accent">My CV</a>
           </div>
-          <div class="greeting-panel reveal">
-            <label for="nameInput">Your name</label>
-            <div class="greeting-form">
-              <input id="nameInput" type="text" placeholder="Enter your name" />
-              <button id="greetBtn" class="btn btn-accent">Say hello</button>
-            </div>
-            <p id="greetingMessage" class="greeting-message"></p>
-          </div>
         </div>
         <div class="col-lg-6 hero-side">
           <div class="profile-frame">
@@ -57,8 +52,17 @@
           <div class="hero-name">
             <h2>Hi, I'm Stacey</h2>
             <p>UI/UX Designer</p>
+            <div class="profile-greeting">
               <img src="C:\Users\stace\OneDrive - Strathmore University\WEB DEV PROJECT\web-dev-project\images\profile.png" alt="profile picture" class="profile-pic">
-
+              <div class="greeting-panel">
+                <label for="nameInput">Your name</label>
+                <div class="greeting-form">
+                  <input id="nameInput" type="text" placeholder="Enter your name">
+                  <button id="greetBtn" class="btn btn-accent">Say hello</button>
+                </div>
+                <p id="greetingMessage" class="greeting-message"></p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

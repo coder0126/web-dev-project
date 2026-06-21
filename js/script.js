@@ -3,12 +3,15 @@ function greetings(fname, today) {
 
     if (hour < 12) {
         var greeting = "Good Morning!";
-    } else if (hour < 18) {
+    } else if (hour < 16) {
         var greeting = "Good Afternoon!";
     } else {
         var greeting = "Good Evening!";
     }
-    return greeting + " " + fname + " " + "<br>Welcome to my website!";
+    if (fname) {
+        return greeting + " " + fname + "<br>Welcome to my website!";
+    }
+    return greeting + "<br>Welcome to my website!";
 }
 
 function displayGreeting() {
@@ -20,6 +23,19 @@ function displayGreeting() {
     if (greetingEl) {
         greetingEl.innerHTML = message;
     }
+}
+
+function updateTime() {
+    var timeDisplay = document.getElementById("timeDisplay");
+    if (timeDisplay) {
+        var now = new Date();
+        timeDisplay.innerHTML = now.toLocaleTimeString();
+    }
+}
+
+function startClock() {
+    updateTime();
+    setInterval(updateTime, 1000);
 }
 
 
@@ -77,6 +93,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     displayGreeting();
+    startClock();
 });
 
 console.log("Script loaded successfully.");
