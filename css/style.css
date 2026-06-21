@@ -158,6 +158,8 @@ h4,
 h5,
 h6 {
   color: var(--black);
+  size: 24px;
+  bold: 600;
 }
 
 .hero h1 {
