@@ -3,11 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
+    <title>JavaScript Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
-    
+
+    <nav>
+        <div class="brand">Stacey Moraa</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="js.html" class="active">JS Demo</a></li>
+        </ul>
+    </nav>
+
+    <div style="max-width: 600px; margin: 50px auto; padding: 20px;">
+
+        <h1>JavaScript Demo</h1>
+
+        <!-- Theme Toggle -->
+        <button id="themeToggleBtn" onclick="themeToggle()">Dark Mode</button>
+
+        <hr>
+
+        <!-- Greeting -->
+        <h3>Personal Greeting</h3>
+        <input type="text" id="nameInput" placeholder="Your name">
+        <button onclick="displayGreeting()">Greet Me</button>
+        <p id="greetingMessage"></p>
+
+        <hr>
+
+        <!-- Live Time -->
+        <h3>Live Time</h3>
+        <div id="timeDisplay" style="font-size: 24px; font-weight: bold;"></div>
+
+        <hr>
+
+        <a href="index.html">← Back to Home</a>
+
+    </div>
+
+    <script>
+        function updateTime() {
+            var now = new Date();
+            document.getElementById('timeDisplay').innerHTML = now.toLocaleTimeString();
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+
 </body>
 </html>
