@@ -626,6 +626,81 @@ body.dark-theme .client-review {
   color: var(--white);
 }
 
+.projects-section {
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, var(--cream), var(--white));
+}
+
+#projectsCarousel {
+  width: 100%;
+  max-width: 900px;
+}
+
+#projectsCarousel .carousel-item {
+  min-height: 560px;
+  padding: 28px 80px 70px;
+  text-align: center;
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.project-carousel-img {
+  width: min(100%, 620px);
+  height: 340px;
+  margin: 0 auto 28px;
+  border-radius: 8px;
+  object-fit: cover;
+  image-rendering: auto;
+}
+
+.project-carousel-caption h2 {
+  margin-bottom: 12px;
+  color: var(--black);
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.project-carousel-caption p {
+  max-width: 620px;
+  margin: 0 auto;
+  color: var(--dark);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#projectsCarousel .carousel-control-prev,
+#projectsCarousel .carousel-control-next {
+  width: 64px;
+}
+
+#projectsCarousel .carousel-indicators {
+  margin-bottom: 18px;
+}
+
+#projectsCarousel .carousel-indicators [data-bs-target] {
+  background-color: var(--brown);
+}
+
+body.dark-theme .projects-section {
+  background: linear-gradient(135deg, var(--black), var(--dark));
+}
+
+body.dark-theme #projectsCarousel .carousel-item {
+  background-color: var(--dark);
+  border-color: var(--brown-light);
+}
+
+body.dark-theme .project-carousel-caption h2,
+body.dark-theme .project-carousel-caption p {
+  color: var(--white);
+}
+
 @media (max-width: 768px) {
   body > header {
     padding: 12px 20px;
@@ -690,6 +765,23 @@ body.dark-theme .client-review {
   .about-highlights,
   .about-gallery {
     grid-template-columns: 1fr;
+  }
+
+  #projectsCarousel .carousel-item {
+    min-height: 520px;
+    padding: 22px 18px 68px;
+  }
+
+  .project-carousel-img {
+    height: 260px;
+  }
+
+  .project-carousel-caption h2 {
+    font-size: 28px;
+  }
+
+  .project-carousel-caption p {
+    font-size: 18px;
   }
 
   .hero-cta {
