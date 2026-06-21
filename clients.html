@@ -3,36 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clients and reviews</title>
+    <title>Clients and Reviews</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
 </head>
 <body>
-     <button id="themeTogglebtn" class="themeToggle" aria-label="Toggle dark mode">
-    <span class="theme-icon"></span>
-  </button>
-    <h1 class="clients-header">Clients and Reviews</h1>
-    <div class="clients-container">
-        <div class="client">
-            <h2 class="client-name">Client 1</h2>
-            <p class="client-review">"Stacey is an exceptional web developer. She delivered our project on time and exceeded our expectations."</p>
-            <img src="C:\Users\stace\OneDrive - Strathmore University\WEB DEV PROJECT\web-dev-project\images\Screenshot 2026-06-20 235524.png" alt="Client 1" class="client-image" profile-frame position: center;>
+    <header>
+        <button id="themeTogglebtn" class="themeToggle" aria-label="Toggle dark mode">
+            <span class="theme-icon"></span>
+        </button>
+        <h1 class="hero-header">Clients and Reviews</h1>
+    </header>
+
+    <nav>
+        <a href="index.html" class="brand">MY PORTFOLIO</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="clients.html" class="active">Clients</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="clients-section">
+        <div id="clientCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="web-dev-project/images/client1.png" class="d-block client-carousel-img" alt="Client 1">
+                    <p class="client-review">
+                        <strong>Client 1:</strong> Great service! Highly recommend!
+                    </p>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="web-dev-project/images/client2.png" class="d-block client-carousel-img" alt="Client 2">
+                    <p class="client-review">
+                        <strong>Client 2:</strong> Excellent work, very professional!
+                    </p>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="web-dev-project/images/client3.png" class="d-block client-carousel-img" alt="Client 3">
+                    <p class="client-review">
+                        <strong>Client 3:</strong> Outstanding experience, will contact again!
+                    </p>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#clientCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#clientCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <div class="client">
-            <h2 class="client-name">Client 2</h2>
-            <p class="client-review">"Working with Stacey was a pleasure. Her attention to detail and creativity brought our vision to life."</p>
-            <img src="C:\Users\stace\OneDrive - Strathmore University\WEB DEV PROJECT\web-dev-project\images\Screenshot 2026-06-20 235622.png" alt="Client 2" class="client-image" profile-frame position: center;>
-        </div>
-        <div class="client">
-            <h2 class="client-name">Client 3</h2>
-            <p class="client-review">"Stacey's expertise in web development is unmatched. She provided valuable insights and solutions throughout the project."</p>
-            <img src="C:\Users\stace\OneDrive - Strathmore University\WEB DEV PROJECT\web-dev-project\images\Screenshot 2026-06-20 235820.png" alt="Client 3" class="client-image" profile-frame position: center;>
-        </div>
-    </div>
-    <a href="index.html" class="btn btn-primary">Back to Home</a>
-</body>
-</html>
-        </div>
-    </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
