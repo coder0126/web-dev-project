@@ -33,3 +33,10 @@ function toggleMenu() {
     const navLinks = document.getElementById("navLinks");
     navLinks.classList.toggle("active");
 }
+console.log("Script loaded successfully.");
+addEventListener("DOMContentLoaded", function() {
+    const themeToggleBtn = document.getElementById("themeToggleBtn");
+    themeToggleBtn.addEventListener("click", themeToggle);
+    const menuToggleBtn = document.getElementById("menuToggleBtn");
+    menuToggleBtn.addEventListener("click", toggleMenu);
+});
