@@ -29,6 +29,71 @@ img {
   box-shadow: #4d2f19 0px 4px 8px, #4d2f19 0px 6px 20px;
   cover: cover;  
 }
+.dark mode {
+  background-color: var(--black);
+  color: var(--white);
+
+}
+.dark-mode .hero {
+  background: linear-gradient(120deg, var(--black), var(--dark));
+}
+.dark-mode .about-section,
+.dark-mode .contact-section {
+  background-color: var(--dark);
+  color: var(--white);
+}
+.dark-mode nav {
+  background-color: var(--black);
+  border-bottom: 1px solid var(--border);
+}
+.dark-mode .contact-form {
+  background-color: var(--dark);
+  border: 1px solid var(--border);
+}
+.dark-mode .form-group input,
+.dark-mode .form-group textarea {
+  background-color: var(--dark);
+  color: var(--white);
+  border: 1px solid var(--border);
+}
+.dark-mode .form-group input:focus,
+.dark-mode .form-group textarea:focus {
+  border-color: var(--brown-light);
+  box-shadow: 0 0 0 3px rgba(123, 79, 44, 0.18);
+}
+.dark-mode .btn,
+.dark-mode .submit-btn,.dark-mode button,
+.dark-mode input[type="submit"] {
+  background-color: var(--brown-light);
+  border-color: var(--brown-light);
+  color: var(--white);
+}
+dark-mode .btn:hover,
+.dark-mode .submit-btn:hover,.dark-mode button:hover,
+.dark-mode input[type="submit"]:hover {
+  background-color: var(--brown-dark);
+  border-color: var(--brown-dark);
+  color: var(--white);
+}
+.dark-mode .btn-outline-accent,
+.dark-mode .btn-outline-primary {
+  background-color: var(--dark);
+  color: var(--brown-light);
+  border: 1px solid var(--brown-light);
+}
+.dark-mode .btn-outline-accent:hover,
+.dark-mode .btn-outline-primary:hover { 
+  background-color: var(--brown-light);
+  border-color: var(--brown-light);
+  color: var(--white);
+} 
+.dark-mode .hero h1 {
+  color: var(--white);
+}
+.dark-mode .lead-text {
+  color: var(--white);
+}
+
 
 a {
   color: var(--brown);
