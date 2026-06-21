@@ -18,6 +18,41 @@ body {
   background-color: var(--white);
   line-height: 1.6;
 }
+
+body.dark-theme {
+  color: var(--white);
+  background-color: var(--black);
+}
+
+body.dark-theme nav,
+body.dark-theme header,
+body.dark-theme footer,
+body.dark-theme .contact-form {
+  background-color: var(--dark);
+  color: var(--white);
+}
+
+body.dark-theme .hero,
+body.dark-theme .about-section,
+body.dark-theme .contact-section {
+  background: var(--black);
+}
+
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme h6,
+body.dark-theme p,
+body.dark-theme nav a {
+  color: var(--white);
+}
+
+body.dark-theme a:hover,
+body.dark-theme nav a.active {
+  color: var(--brown-light);
+}
 img {
   max-width: 100%;
   height: auto;
@@ -159,7 +194,7 @@ h5,
 h6 {
   color: var(--black);
   size: 24px;
-  bold: 600;
+  fill: 600;
 }
 
 .hero h1 {

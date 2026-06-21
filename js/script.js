@@ -1,5 +1,3 @@
-
-
 function greetings(fname, today) {
     var hour = today.getHours();
 
@@ -14,21 +12,31 @@ function greetings(fname, today) {
 }
 
 function displayGreeting() {
-    var name = document.getElementById("nameInput").value;
+    var nameInput = document.getElementById("nameInput");
+    var name = nameInput ? nameInput.value.trim() : '';
     var today = new Date();
     var message = greetings(name, today);
-    document.getElementById("greetingMessage").innerHTML = message;
+    var greetingEl = document.getElementById("greetingMessage");
+    if (greetingEl) {
+        greetingEl.innerHTML = message;
+    }
 }
 
 
 function themeToggle() {
     var body = document.body;
     body.classList.toggle("dark-theme");
-    const themeToggleBtn = document.getElementById("themeTogglebtn");  
+    const themeToggleBtn = document.getElementById("themeTogglebtn") || document.getElementById("themeToggleBtn");  
     if (body.classList.contains("dark-theme")) {
-        themeToggleBtn.textContent = "light";  
+        localStorage.setItem("theme", "dark");
+        if (themeToggleBtn) {
+            themeToggleBtn.textContent = "Light";
+        }
     } else {
-        themeToggleBtn.textContent = "dark";  
+        localStorage.setItem("theme", "light");
+        if (themeToggleBtn) {
+            themeToggleBtn.textContent = "Dark";
+        }
     }
 }
 
@@ -40,9 +48,18 @@ function toggleMenu() {
 
 
 document.addEventListener("DOMContentLoaded", function() {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark-theme");
+    }
     
-    const themeToggleBtn = document.getElementById("themeTogglebtn");
+    const themeToggleBtn = document.getElementById("themeTogglebtn") || document.getElementById("themeToggleBtn");
     if (themeToggleBtn) {
+        if (document.body.classList.contains("dark-theme")) {
+            themeToggleBtn.textContent = "Light";
+        } else {
+            themeToggleBtn.textContent = "Dark";
+        }
         themeToggleBtn.addEventListener("click", themeToggle);
     }
     
@@ -50,6 +67,16 @@ document.addEventListener("DOMContentLoaded", function() {
     if (menuToggleBtn) {
         menuToggleBtn.addEventListener("click", toggleMenu);
     }
+
+    const greetBtn = document.getElementById("greetBtn");
+    if (greetBtn) {
+        greetBtn.addEventListener("click", function (event) {
+            event.preventDefault();
+            displayGreeting();
+        });
+    }
+
+    displayGreeting();
 });
 
 console.log("Script loaded successfully.");

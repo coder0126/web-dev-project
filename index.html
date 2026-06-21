@@ -13,7 +13,6 @@
   <button id="themeTogglebtn" class="themeToggle" aria-label="Toggle dark mode">
     <span class="theme-icon"></span>
   </button>
-
   <h1 class="hero-header">Welcome to my Portfolio</h1>
 </header>
   <nav>
@@ -42,7 +41,14 @@
             <a href="contact.html" class="btn btn-outline-accent">Get in touch</a>
             <a href="index.html" class="btn btn-outline-accent">Back to Home</a>
             <a href="work.html" class="btn btn-outline-accent">My CV</a>
-           
+          </div>
+          <div class="greeting-panel reveal">
+            <label for="nameInput">Your name</label>
+            <div class="greeting-form">
+              <input id="nameInput" type="text" placeholder="Enter your name" />
+              <button id="greetBtn" class="btn btn-accent">Say hello</button>
+            </div>
+            <p id="greetingMessage" class="greeting-message"></p>
           </div>
         </div>
         <div class="col-lg-6 hero-side">
