@@ -26,8 +26,7 @@ img {
   border-radius: 50%;  
   object-fit: cover; 
   image-rendering: pixelated;
-  box-shadow: #4d2f19 0px 4px 8px, #4d2f19 0px 6px 20px;
-  cover: cover;  
+  box-shadow: #4d2f19 0px 4px 8px, #4d2f19 0px 6px 20px;  
 }
 .dark mode {
   background-color: var(--black);
