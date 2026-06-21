@@ -342,12 +342,211 @@ input[type="submit"]:hover {
   margin: 0 auto;
 }
 
+.about-page {
+  background:
+    linear-gradient(135deg, rgba(248, 244, 239, 0.96), rgba(255, 255, 255, 0.94)),
+    linear-gradient(45deg, rgba(123, 79, 44, 0.16), rgba(14, 116, 144, 0.16));
+}
+
+.about-layout {
+  max-width: 1120px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: 48px;
+  align-items: center;
+}
+
+.about-intro h2 {
+  max-width: 680px;
+  margin: 0 0 18px;
+  color: var(--black);
+  font-size: 58px;
+  line-height: 1.05;
+  font-weight: 800;
+}
+
+.about-copy {
+  max-width: 620px;
+  color: var(--dark);
+  font-size: 20px;
+  line-height: 1.75;
+}
+
+.about-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.about-portrait {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+}
+
+.about-profile-image {
+  width: min(100%, 360px);
+  height: 430px;
+  border-radius: 50%;
+  object-fit: cover;
+  image-rendering: auto;
+  box-shadow: 0 24px 60px rgba(17, 17, 17, 0.22);
+}
+
+.about-badge {
+  position: absolute;
+  right: 0;
+  bottom: 26px;
+  max-width: 240px;
+  padding: 16px 18px;
+  background-color: var(--white);
+  border-left: 6px solid #0e7490;
+  box-shadow: var(--shadow);
+}
+
+.about-badge span {
+  display: block;
+  color: var(--brown);
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.about-badge strong {
+  display: block;
+  color: var(--black);
+  font-size: 18px;
+}
+
+.about-highlights {
+  max-width: 1120px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 52px auto 0;
+}
+
+.about-highlight {
+  padding: 24px;
+  background-color: var(--white);
+  border-top: 5px solid var(--brown);
+  box-shadow: var(--shadow);
+}
+
+.about-highlight:nth-child(2) {
+  border-top-color: #0e7490;
+}
+
+.about-highlight:nth-child(3) {
+  border-top-color: #be123c;
+}
+
+.about-highlight span {
+  color: var(--brown);
+  font-weight: 800;
+}
+
+.about-highlight h3 {
+  margin: 10px 0;
+  font-size: 24px;
+}
+
+.about-highlight p {
+  margin: 0;
+  color: var(--dark);
+}
+
+.about-gallery {
+  max-width: 920px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 42px auto 0;
+}
+
+.about-gallery-item {
+  text-align: center;
+}
+
+.about-gallery-item img {
+  width: 100%;
+  height: 180px;
+  border-radius: 14px;
+  object-fit: cover;
+  image-rendering: auto;
+}
+
+.about-gallery-item p {
+  margin: 12px 0 0;
+  color: var(--brown-dark);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+body.dark-theme .about-page {
+  background: linear-gradient(135deg, var(--black), var(--dark));
+}
+
+body.dark-theme .about-copy,
+body.dark-theme .about-highlight p {
+  color: var(--white);
+}
+
+body.dark-theme .about-highlight,
+body.dark-theme .about-badge {
+  background-color: var(--dark);
+  border-color: var(--brown-light);
+}
+
+body.dark-theme .about-badge strong,
+body.dark-theme .about-gallery-item p {
+  color: var(--white);
+}
+
 .contact-form {
   padding: 30px;
   background-color: var(--white);
   border: 1px solid var(--border);
   border-radius: 10px;
   box-shadow: var(--shadow);
+}
+
+.contact-alert {
+  display: none;
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.contact-alert.success,
+.contact-alert.failed {
+  display: block;
+}
+
+.contact-alert.success {
+  color: #14532d;
+  background-color: #dcfce7;
+  border: 1px solid #86efac;
+}
+
+.contact-alert.failed {
+  color: #7f1d1d;
+  background-color: #fee2e2;
+  border: 1px solid #fca5a5;
+}
+
+body.dark-theme .contact-alert.success {
+  color: #dcfce7;
+  background-color: #14532d;
+}
+
+body.dark-theme .contact-alert.failed {
+  color: #fee2e2;
+  background-color: #7f1d1d;
 }
 
 .form-group {
@@ -458,6 +657,39 @@ body.dark-theme .client-review {
 
   .lead-text {
     font-size: 20px;
+  }
+
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-intro h2 {
+    font-size: 40px;
+  }
+
+  .about-copy {
+    font-size: 18px;
+  }
+
+  .about-portrait {
+    min-height: auto;
+  }
+
+  .about-profile-image {
+    height: 360px;
+  }
+
+  .about-badge {
+    position: static;
+    margin-top: -40px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-highlights,
+  .about-gallery {
+    grid-template-columns: 1fr;
   }
 
   .hero-cta {

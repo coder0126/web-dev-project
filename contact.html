@@ -17,8 +17,11 @@
                 <h1>Contact Me</h1>
                 <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
             </div>
+            <a href="index.html" class="btn btn-primary">Back to Home</a>
+            <a href="services.html" class="btn btn-primary">Back</a>
 
-            <form class="contact-form" method="POST">
+            <form id="contactForm" class="contact-form" method="POST" novalidate>
+                <div id="contactAlert" class="contact-alert" role="alert" aria-live="polite"></div>
 
                 <div class="form-row">
                     <div class="form-group">
@@ -53,7 +56,6 @@
 
                 <button type="submit" class="submit-btn">Send Message</button>
             </form>
-            <a href="index.html" class="btn btn-primary">Back to Home</a>
         </div>
     </section>
 

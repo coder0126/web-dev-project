@@ -69,14 +69,18 @@ document.addEventListener("DOMContentLoaded", function() {
     if (contactForm) {
         contactForm.addEventListener("submit", function (event) {
             event.preventDefault();
-            const name = document.getElementById("name").value.trim();
+            const firstName = document.getElementById("firstName").value.trim();
+            const lastName = document.getElementById("lastName").value.trim();
             const email = document.getElementById("email").value.trim();
+            const subject = document.getElementById("subject").value.trim();
             const message = document.getElementById("message").value.trim();
-            if (!name || !email || !message) {
-                alert("Please fill in all fields.");
+
+            if (!firstName || !lastName || !email || !subject || !message || !contactForm.checkValidity()) {
+                showContactAlert("failed", "Message failed. Please fill in all required fields correctly.");
                 return;
             }
-            alert("Thank you for your message, " + name + "! We will get back to you shortly.");
+
+            showContactAlert("success", "Message sent successfully. Thank you, " + firstName + "!");
             contactForm.reset();
         });
     }
@@ -113,3 +117,14 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 console.log("Script loaded successfully.");
+
+function showContactAlert(type, message) {
+    const contactAlert = document.getElementById("contactAlert");
+    if (!contactAlert) {
+        alert(message);
+        return;
+    }
+
+    contactAlert.textContent = message;
+    contactAlert.className = "contact-alert " + type;
+}
