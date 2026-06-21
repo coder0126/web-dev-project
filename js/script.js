@@ -1,8 +1,8 @@
+
+
 function greetings(fname, today) {
-    
     var hour = today.getHours();
 
-    
     if (hour < 12) {
         var greeting = "Good Morning!";
     } else if (hour < 18) {
@@ -12,31 +12,44 @@ function greetings(fname, today) {
     }
     return greeting + " " + fname + " " + "<br>Welcome to my website!";
 }
+
 function displayGreeting() {
     var name = document.getElementById("nameInput").value;
     var today = new Date();
     var message = greetings(name, today);
     document.getElementById("greetingMessage").innerHTML = message;
 }
+
+
 function themeToggle() {
     var body = document.body;
     body.classList.toggle("dark-theme");
-    const themeToggleBtn = document.getElementById("themeToggleBtn");
+    const themeToggleBtn = document.getElementById("themeTogglebtn");  
     if (body.classList.contains("dark-theme")) {
-        themeToggleBtn.textContent = "Light Mode";
+        themeToggleBtn.textContent = "light";  
     } else {
-        themeToggleBtn.textContent = "Dark Mode";
+        themeToggleBtn.textContent = "dark";  
     }
+}
 
-}
+
 function toggleMenu() {
-    const navLinks = document.getElementById("navLinks");
-    navLinks.classList.toggle("active");
+    const nav = document.querySelector("nav ul");  
+    nav.classList.toggle("active");
 }
-console.log("Script loaded successfully.");
-addEventListener("DOMContentLoaded", function() {
-    const themeToggleBtn = document.getElementById("themeToggleBtn");
-    themeToggleBtn.addEventListener("click", themeToggle);
-    const menuToggleBtn = document.getElementById("menuToggleBtn");
-    menuToggleBtn.addEventListener("click", toggleMenu);
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    
+    const themeToggleBtn = document.getElementById("themeTogglebtn");
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener("click", themeToggle);
+    }
+    
+    const menuToggleBtn = document.getElementById("menu");
+    if (menuToggleBtn) {
+        menuToggleBtn.addEventListener("click", toggleMenu);
+    }
 });
+
+console.log("Script loaded successfully.");
