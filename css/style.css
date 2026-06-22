@@ -19,24 +19,23 @@ body {
   line-height: 1.6;
   
 }
-
-body > header {
+.main-header {
   display: flex;
   align-items: center;
-  gap: 22px;
-  flex-wrap: wrap;
-  padding: 12px 38px;
+  justify-content: space-between;
+  padding: 10px 38px;
+  background-color: var(--white);
   border-bottom: 1px solid var(--border);
 }
 
 .hero-header {
   flex: 1 1 260px;
   margin: 0;
-  font-size: 30px;
+  font-size: 24px;
 }
 
 .themeToggle {
-  padding: 8px 16px;
+  padding: 6px 12px;
   border-radius: 8px;
 }
 
@@ -84,7 +83,7 @@ img {
   image-rendering: pixelated;
   box-shadow: #4d2f19 0px 4px 8px, #4d2f19 0px 6px 20px;  
 }
-.dark mode {
+.dark-mode {
   background-color: var(--black);
   color: var(--white);
 
@@ -159,48 +158,42 @@ a:hover {
   color: var(--brown-dark);
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+nav.navbar {
   padding: 15px 60px;
   background-color: var(--white);
   border-bottom: 1px solid var(--border);
 }
 
-.brand {
+.navbar-brand.brand {
   color: var(--black);
   font-weight: bold;
   letter-spacing: 2px;
 }
 
-  
-
-nav ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  margin: 0;
-  margin-left: auto;
-  padding: 0;
+.navbar-nav {
+  gap: 10px;
+  transform: translateX(-10px);
 }
 
-nav a {
+
+.navbar .nav-link {
   color: var(--dark);
   font-weight: 600;
 }
 
-nav a:hover,
-nav a.active {
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
   color: var(--brown);
 }
 
-.hero {
-  min-height: 78vh;
+.hero-header h1{
+  min-height: 45vh;
+  border-inline-end-color: #111111;
   display: flex;
   align-items: center;
-  padding: 60px 0;
+  padding: 30px 0;
   background: linear-gradient(120deg, var(--white), var(--cream));
+  
 }
 
 .eyebrow {
@@ -216,11 +209,6 @@ h1,h2,h3,h4,h5,h6 {
   font-weight: 600;
 }
 
-.hero h1 {
-  font-size: 68px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
 
 .lead-text {
   color: var(--dark);
@@ -235,12 +223,41 @@ h1,h2,h3,h4,h5,h6 {
   flex-wrap: wrap;
 }
 
-.profile-greeting {
+.hero-name {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 16px;
+  align-items: start;
+}
+
+.hero-name > h2 {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+.hero-name > p {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+.hero-name > .profile-greeting {
+  grid-column: 1;
+  grid-row: 3;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
-  margin-top: 20px;
+  margin-top: 0;
+}
+
+.hero-name > .greeting-panel {
+  grid-column: 2;
+  grid-row: 3;
+  align-self: center;
+}
+
+.profile-greeting {
+  flex: 0 0 auto;
 }
 
 .profile-pic {
@@ -250,7 +267,9 @@ h1,h2,h3,h4,h5,h6 {
 .greeting-panel {
   max-width: 360px;
   text-align: left;
-  margin-left: auto;
+  flex: 1;
+  margin-top: 0;
+  transform: none;
 }
 
 .greeting-panel label {
@@ -264,6 +283,7 @@ h1,h2,h3,h4,h5,h6 {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
+  margin-top: 12px;
 }
 
 .greeting-form input {
@@ -702,9 +722,6 @@ body.dark-theme .project-carousel-caption p {
 }
 
 @media (max-width: 768px) {
-  body > header {
-    padding: 12px 20px;
-  }
 
   .hero-header {
     font-size: 26px;
@@ -797,6 +814,7 @@ body.dark-theme .project-carousel-caption p {
     max-width: 320px;
     margin-left: 0;
     text-align: left;
+    margin-top:auto;
   }
 
   .form-row {
