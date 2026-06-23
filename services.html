@@ -1,53 +1,142 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SERVICES I OFFER</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="js/script.js" defer></script>
 </head>
 <body>
      <button id="themeTogglebtn" class="themeToggle" aria-label="Toggle dark mode">
     <span class="theme-icon"></span>
   </button>
-  <nav class="navbar navbar-expand-lg navbar-light bg-white" aria-label="Primary navigation">
-    <div class="container-fluid">
-      <a class="navbar-brand brand" href="index.html">MY PORTFOLIO</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mainNavbar">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="work.html">Work</a></li>
-          <li class="nav-item"><a class="nav-link" href="clients.html">Clients</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white" aria-label="Primary navigation">
+          <div class="container-fluid">
+            <a class="navbar-brand brand" href="index.html">MY PORTFOLIO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+    </header>
+
+    <main class="services-page container">
+      <header class="services-header-block">
+        <h1 class="services-header">SERVICES I OFFER</h1>
+        <p class="services-copy">I offer a range of services to help you achieve your goals. Click any card to learn more, or contact me for a quote.</p>
+      </header>
+
+      <section class="service-grid" aria-label="Service list">
+        <article class="service-card" data-service-id="web">
+          <h3 class="service-title">Web Development</h3>
+          <p class="service-summary">Responsive, accessible websites optimized for performance.</p>
+          <div class="service-details" aria-hidden="true">
+            <ul>
+              <li>Landing pages & multi-page sites</li>
+              <li>Performance tuning & SEO basics</li>
+              <li>Accessibility improvements (WCAG)</li>
+            </ul>
+          </div>
+          <div class="service-actions">
+            <button class="btn btn-outline-primary service-toggle" aria-expanded="false">Learn more</button>
+            <button class="btn btn-accent" data-bs-toggle="modal" data-bs-target="#contactModal">Get a quote</button>
+
+          </div>
+        </article>
+
+        <article class="service-card" data-service-id="webapp">
+          <h3 class="service-title">Web Application Development</h3>
+          <p class="service-summary">Custom web apps with modern JS frameworks and backend APIs.</p>
+          <div class="service-details" aria-hidden="true">
+            <ul>
+              <li>SPAs, PWAs and server-rendered apps</li>
+              <li>API design and integration</li>
+              <li>Authentication, role-based access</li>
+            </ul>
+          </div>
+          <div class="service-actions">
+            <button class="btn btn-outline-primary service-toggle" aria-expanded="false">Learn more</button>
+            <button class="btn btn-accent" data-bs-toggle="modal" data-bs-target="#contactModal">Get a quote</button>
+
+          </div>
+        </article>
+
+        <article class="service-card" data-service-id="desktop">
+          <h3 class="service-title">Desktop Application Development</h3>
+          <p class="service-summary">Cross-platform desktop apps using proven toolchains.</p>
+          <div class="service-details" aria-hidden="true">
+            <ul>
+              <li>Electron / Tauri apps</li>
+              <li>Native installers and updates</li>
+              <li>Packaging and distribution</li>
+            </ul>
+          </div>
+          <div class="service-actions">
+            <button class="btn btn-outline-primary service-toggle" aria-expanded="false">Learn more</button>
+            <button class="btn btn-accent" data-bs-toggle="modal" data-bs-target="#contactModal">Get a quote</button>
+          </div>
+        </article>
+      </section>
+
+      <div class="mt-4">
+        <a href="index.html" class="btn btn-secondary">Back to Home</a>
+        <a href="contact.html" class="btn btn-secondary">Contact me</a>
+      </div>
+
+    </main>
+
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="contactModalLabel">Request a Quote</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="quoteForm">
+              <div class="mb-3">
+                <label for="qName" class="form-label">Name</label>
+                <input type="text" class="form-control" id="qName" required>
+              </div>
+              <div class="mb-3">
+                <label for="qEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="qEmail" required>
+              </div>
+              <div class="mb-3">
+                <label for="qMessage" class="form-label">Project details</label>
+                <textarea id="qMessage" class="form-control" rows="4" required></textarea>
+              </div>
+              <div id="quoteAlert" role="status" class="text-success"></div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" id="sendQuoteBtn" class="btn btn-primary">Send request</button>
+          </div>
+        </div>
       </div>
     </div>
-  </nav>
-    <h1 class="services-header">SERVICES I OFFER</h1>
-    <p class="services-copy">I offer a range of services to help you achieve your goals. Whether you need a website, a web application, or a desktop application, I have the skills and experience to deliver high-quality solutions that meet your needs.</p>
-    <div class="services-container">
-        <div class="service">
-            <h2 class="service-title">Web Development</h2>
-            <p class="service-description">I create responsive and user-friendly websites that are optimized for performance and accessibility. From simple landing pages to complex web applications, I can help you build a strong online presence.</p>
-        </div>
-        <div class="service">
-            <h2 class="service-title">Web Application Development</h2>
-            <p class="service-description">I develop custom web applications that are tailored to your specific needs. Whether you need a content management system, an e-commerce platform, or a social networking site, I can help you bring your ideas to life.</p>
-        </div>
-        <div class="service">
-            <h2 class="service-title">Desktop Application Development</h2>
+
+    <footer>
+        <p>&copy; 2026 Stacey Moraa. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
             <p class="service-description">I build desktop applications that are designed to run on Windows, macOS, and Linux. From productivity tools to multimedia applications, I can help you create software that meets your requirements.</p>
         </div>
     </div>
-    <a href="index.html" class="btn btn-primary">Back to Home</a>
-    <a href="contact.html" class="btn btn-primary">contact me</a>
     <footer>
         <p>&copy; 2024 Stacey Moraa. All rights reserved.</p>
     </footer>

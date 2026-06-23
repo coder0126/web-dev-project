@@ -128,3 +128,51 @@ function showContactAlert(type, message) {
     contactAlert.textContent = message;
     contactAlert.className = "contact-alert " + type;
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    
+    document.querySelectorAll('.service-toggle').forEach(function(btn) {
+        btn.addEventListener('click', function (e) {
+            const card = btn.closest('.service-card');
+            if (!card) return;
+            const isOpen = card.classList.toggle('open');
+            btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+    });
+
+
+
+
+
+
+    const sendQuoteBtn = document.getElementById('sendQuoteBtn');
+    if (sendQuoteBtn) {
+        sendQuoteBtn.addEventListener('click', function () {
+            const name = document.getElementById('qName');
+            const email = document.getElementById('qEmail');
+            const message = document.getElementById('qMessage');
+            const alertEl = document.getElementById('quoteAlert');
+
+            if (!name || !email || !message) return;
+            if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
+                if (alertEl) { alertEl.textContent = 'Please fill all fields.'; alertEl.className = 'text-danger'; }
+                return;
+            }
+
+          
+            if (alertEl) { alertEl.textContent = 'Request sent — thank you! I will respond by email.'; alertEl.className = 'text-success'; }
+
+          
+            setTimeout(function () {
+                const modalEl = document.getElementById('contactModal');
+                if (modalEl) {
+                    const modal = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
+                    modal.hide();
+                }
+              
+                const form = document.getElementById('quoteForm');
+                if (form) form.reset();
+            }, 900);
+        });
+    }
+});
