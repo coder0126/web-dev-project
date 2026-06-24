@@ -57,11 +57,31 @@ function themeToggle() {
 }
 
 
+
+
 function toggleMenu() {
     const nav = document.querySelector("nav ul");
     if (nav) {
         nav.classList.toggle("active");
     }
+}
+
+const quotes = [
+    "The only way to do great work is to love what you do. – Steve Jobs",
+    "Innovation distinguishes between a leader and a follower. – Steve Jobs",
+    "Life is what happens when you're busy making other plans. – John Lennon",
+    "The future belongs to those who believe in the beauty of their dreams. – Eleanor Roosevelt",
+    "It is during our darkest moments that we must focus to see the light. – Aristotle",
+    "The only impossible journey is the one you never begin. – Tony Robbins",
+    "Success is not final, failure is not fatal. – Winston Churchill",
+    "Believe you can and you're halfway there. – Theodore Roosevelt",
+    "The best time to plant a tree was 20 years ago. The second best time is now. – Chinese Proverb",
+    "Your time is limited, don't waste it living someone else's life. – Steve Jobs"
+];
+
+function getQuote() {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    return quotes[randomIndex];
 }
 
 document.addEventListener("DOMContentLoaded", function() {
