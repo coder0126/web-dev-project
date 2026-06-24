@@ -160,10 +160,15 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-
-
-
-
+    const quoteBtn = document.getElementById('quoteBtn');
+    if (quoteBtn) {
+        quoteBtn.addEventListener('click', function () {
+            const quoteDisplay = document.getElementById('displayQuote');
+            if (quoteDisplay) {
+                quoteDisplay.textContent = getQuote();
+            }
+        });
+    }
 
     const sendQuoteBtn = document.getElementById('sendQuoteBtn');
     if (sendQuoteBtn) {

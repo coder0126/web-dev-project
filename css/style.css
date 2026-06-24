@@ -878,6 +878,47 @@ body.dark-theme .project-carousel-caption p {
   margin-top: 12px;
 }
 
+.quote-section {
+  background: linear-gradient(135deg, var(--brown), var(--brown-dark));
+  padding: 30px 24px;
+  border-radius: 12px;
+  margin: 30px 0 40px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+#quoteBtn {
+  margin-bottom: 16px;
+}
+
+.quote-text {
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.6;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+
+  .services-nav-buttons {
+    display: flex;
+    gap: 12px;
+    margin: 40px 0 30px;
+    justify-content: flex-start;
+  }
+  margin: 0;
+}
+
+body.dark-theme .quote-section {
+  background: linear-gradient(135deg, #3d1f35, #291642);
+}
+
+body.dark-theme .quote-text {
+  color: var(--cream);
+}
+
 @media (max-width: 992px) {
   .service-grid { grid-template-columns: repeat(2, 1fr); }
 }
