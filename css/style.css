@@ -763,6 +763,8 @@ body.dark-theme .project-carousel-caption h2,
 body.dark-theme .project-carousel-caption p {
   color: var(--white);
 }
+.card { transition: transform 0.2s; cursor: pointer; }
+.card:hover { transform: translateY(-8px); box-shadow: 0 12px 24px rgba(0,0,0,0.15) !important; }
 
 @media (max-width: 768px) {
 
