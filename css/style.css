@@ -18,6 +18,7 @@ body {
   color: var(--white);
   background-color: var(--brown-light);
   line-height: 1.6;
+  cursor:pointer;
   
 }
 .button{
@@ -203,6 +204,13 @@ nav.navbar {
   background: linear-gradient(120deg, var(--white), var(--cream));
   
 }
+h2{
+  color:var(--black);
+  font-size: 16px;
+  font-weight: 350;
+  text-align: right;
+  transform:translateX(-20)
+}
 
 .eyebrow {
   color: var(--brown);
@@ -211,7 +219,7 @@ nav.navbar {
   letter-spacing: 2px;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,h3,h4,h5,h6 {
   color: var(--black);
   font-size: 24px;
   font-weight: 700;
@@ -264,6 +272,7 @@ h1,h2,h3,h4,h5,h6 {
 .hero-name > h2 {
   grid-column: 1 / -1;
   margin: 0;
+  
 }
 
 .hero-name > p {
@@ -558,11 +567,14 @@ body.dark-theme .about-gallery-item p {
 
 .contact-form {
   padding: 30px;
-  background-color: var(--white);
+  
+  background-color: var( --brown-light);
   border: 1px solid var(--border);
   border-radius: 10px;
   box-shadow: var(--shadow);
 }
+
+
 
 .contact-alert {
   display: none;
@@ -616,7 +628,7 @@ body.dark-theme .contact-alert.failed {
   padding: 12px;
   border: 1px solid var(--border);
   border-radius: 8px;
-  background-color: var(--white);
+  background-color: var(--cream);
   color: var(--dark);
 }
 
