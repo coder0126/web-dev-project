@@ -108,15 +108,6 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.classList.add("dark-theme");
     }
     
-    const themeToggleBtn = document.getElementById("themeTogglebtn") || document.getElementById("themeToggleBtn");
-    if (themeToggleBtn) {
-        if (document.body.classList.contains("dark-theme")) {
-            themeToggleBtn.textContent = "Light";
-        } else {
-            themeToggleBtn.textContent = "Dark";
-        }
-        themeToggleBtn.addEventListener("click", themeToggle);
-    }
     
     const menuToggleBtn = document.getElementById("menu");
     if (menuToggleBtn) {

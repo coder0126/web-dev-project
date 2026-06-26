@@ -1,38 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HOME</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script class="script.js"></script>
-  
-</head>
-<body> 
- <button>Dark</button>
-<h1>
-  STACEY'S PORTFOLIO
-</h1>
- <div>
-  <nav>
-    <button>
-    <a href="about.html" class="btn btn-primary">ABOUT PAGE</a>
-    </button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
 
-    <button>
-    <a href="contact.html" class="btn btn-primary">contact me</a>
-    </button>
- 
-    <button>
-    <a href="clients.html" class="btn btn-primary">clients reviews</a>
-    </button>
-    <button>
-    <a href="work.html" class="btn btn-primary">Curriculum vitae</a>
-    </button>
-</ul>
-  </nav>
- </div>
-  
-</body>
+    <header>
+      <button id="themeTogglebtn" class="themeToggle" aria-label="Toggle dark mode">
+        <span class="theme-icon"></span>
+      </button>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container-fluid">
+        <a class="navbar-brand brand" href="index.html">MY PORTFOLIO</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="work.html">Work</a></li>
+            <li class="nav-item"><a class="nav-link" href="clients.html">Clients</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section>
+      <div class="container py-5">
+        <div class="row align-items-center">
+
+         
+          <div class="col-md-6">
+
+          
+            <div class="mb-4">
+              <p class="fw-semibold">Your name</p>
+              <div class="d-flex gap-2">
+                <input type="text" id="nameInput" class="form-control" placeholder="Enter your name" />
+                <button class="btn btn-primary" onclick="displayGreeting()">Say hello</button>
+              </div>
+              <p id="greetingMessage" class="mt-2 fw-bold"></p>
+            </div>
+
+            <p class="text-uppercase fw-semibold">Web Developer — Student</p>
+            <h1 class="fw-bold display-5">I build things that run on the web and on the desktop.</h1>
+            <p class="mt-3">I'm Stacey Moraa, a passionate web developer and designer.</p>
+            <div class="mt-4 d-flex flex-wrap gap-2">
+              <a href="about.html" class="btn btn-primary">More about me</a>
+              <a href="contact.html" class="btn btn-outline-secondary">Get in touch</a>
+              <a href="index.html" class="btn btn-outline-secondary">Back to Home</a>
+              <a href="work.html" class="btn btn-outline-secondary">My CV</a>
+            </div>
+          </div>
+
+          
+          <div class="col-md-6 text-center">
+            <h4 class="fw-bold">Hi, I'm Stacey</h4>
+            <p class="text-muted">UI/UX Designer</p>
+            <img src="images/profile.png" alt="Stacey avatar" class="img-fluid" />
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center py-4 mt-5">
+      <small class="text-muted">&copy; 2026 Stacey. All rights reserved.</small>
+    </footer>
+
+    
+  </body>
 </html>
-      
