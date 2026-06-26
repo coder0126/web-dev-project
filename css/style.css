@@ -81,6 +81,143 @@ body.dark-theme a:hover,
 body.dark-theme nav a.active {
   color: var(--brown-light);
 }
+
+body.dark-theme .hero h1 {
+  color: var(--white);
+}
+
+body.dark-theme .lead-text {
+  color: var(--white);
+}
+
+body.dark-theme .hero {
+  background: linear-gradient(120deg, var(--black), var(--dark));
+}
+
+body.dark-theme .about-section,
+body.dark-theme .contact-section {
+  background-color: var(--dark);
+  color: var(--white);
+}
+
+body.dark-theme nav {
+  background-color: var(--black);
+  border-bottom: 1px solid var(--border);
+}
+
+body.dark-theme .contact-form {
+  background-color: var(--dark);
+  border: 1px solid var(--border);
+}
+
+body.dark-theme .form-group input,
+body.dark-theme .form-group textarea {
+  background-color: var(--dark);
+  color: var(--white);
+  border: 1px solid var(--border);
+}
+
+body.dark-theme .form-group input:focus,
+body.dark-theme .form-group textarea:focus {
+  border-color: var(--brown-light);
+  box-shadow: 0 0 0 3px rgba(123, 79, 44, 0.18);
+}
+
+body.dark-theme .btn,
+body.dark-theme .submit-btn,
+body.dark-theme button,
+body.dark-theme input[type="submit"] {
+  background-color: var(--brown-light);
+  border-color: var(--brown-light);
+  color: var(--white);
+}
+
+body.dark-theme .btn:hover,
+body.dark-theme .submit-btn:hover,
+body.dark-theme button:hover,
+body.dark-theme input[type="submit"]:hover {
+  background-color: var(--brown-dark);
+  border-color: var(--brown-dark);
+  color: var(--white);
+}
+
+body.dark-theme .btn-outline-accent,
+body.dark-theme .btn-outline-primary {
+  background-color: var(--dark);
+  color: var(--brown-light);
+  border: 1px solid var(--brown-light);
+}
+
+body.dark-theme .btn-outline-accent:hover,
+body.dark-theme .btn-outline-primary:hover { 
+  background-color: var(--brown-light);
+  border-color: var(--brown-light);
+  color: var(--white);
+}
+
+body.dark-theme .greeting-panel {
+  background-color: transparent;
+}
+
+body.dark-theme .greeting-panel label,
+body.dark-theme .greeting-message {
+  color: var(--white);
+}
+
+body.dark-theme .about-page {
+  background: linear-gradient(135deg, var(--black), var(--dark));
+}
+
+body.dark-theme .about-copy,
+body.dark-theme .about-highlight p {
+  color: var(--white);
+}
+
+body.dark-theme .about-highlight,
+body.dark-theme .about-badge {
+  background-color: var(--dark);
+  border-color: var(--brown-light);
+}
+
+body.dark-theme .about-badge strong,
+body.dark-theme .about-gallery-item p {
+  color: var(--white);
+}
+
+body.dark-theme .clients-section {
+  background-color: var(--black);
+}
+
+body.dark-theme .client-review {
+  color: var(--white);
+}
+
+body.dark-theme .projects-section {
+  background: linear-gradient(135deg, var(--black), var(--dark));
+}
+
+body.dark-theme #projectsCarousel .carousel-item {
+  background-color: var(--dark);
+  border-color: var(--brown-light);
+}
+
+body.dark-theme .project-carousel-caption h2,
+body.dark-theme .project-carousel-caption p {
+  color: var(--white);
+}
+
+body.dark-theme .quote-section {
+  background: linear-gradient(135deg, #3d1f35, #291642);
+}
+
+body.dark-theme .quote-text {
+  color: var(--cream);
+}
+
+body.dark-theme h1 {
+  color: #fde8f4;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -91,71 +228,6 @@ img {
   image-rendering: pixelated;
   box-shadow: #4d2f19 0px 4px 8px, #4d2f19 0px 6px 20px;  
 }
-.dark-mode {
-  background-color: var(--black);
-  color: var(--white);
-
-}
-.dark-mode .hero {
-  background: linear-gradient(120deg, var(--black), var(--dark));
-}
-.dark-mode .about-section,
-.dark-mode .contact-section {
-  background-color: var(--dark);
-  color: var(--white);
-}
-.dark-mode nav {
-  background-color: var(--black);
-  border-bottom: 1px solid var(--border);
-}
-.dark-mode .contact-form {
-  background-color: var(--dark);
-  border: 1px solid var(--border);
-}
-.dark-mode .form-group input,
-.dark-mode .form-group textarea {
-  background-color: var(--dark);
-  color: var(--white);
-  border: 1px solid var(--border);
-}
-.dark-mode .form-group input:focus,
-.dark-mode .form-group textarea:focus {
-  border-color: var(--brown-light);
-  box-shadow: 0 0 0 3px rgba(123, 79, 44, 0.18);
-}
-.dark-mode .btn,
-.dark-mode .submit-btn,.dark-mode button,
-.dark-mode input[type="submit"] {
-  background-color: var(--brown-light);
-  border-color: var(--brown-light);
-  color: var(--white);
-}
-dark-mode .btn:hover,
-.dark-mode .submit-btn:hover,.dark-mode button:hover,
-.dark-mode input[type="submit"]:hover {
-  background-color: var(--brown-dark);
-  border-color: var(--brown-dark);
-  color: var(--white);
-}
-.dark-mode .btn-outline-accent,
-.dark-mode .btn-outline-primary {
-  background-color: var(--dark);
-  color: var(--brown-light);
-  border: 1px solid var(--brown-light);
-}
-.dark-mode .btn-outline-accent:hover,
-.dark-mode .btn-outline-primary:hover { 
-  background-color: var(--brown-light);
-  border-color: var(--brown-light);
-  color: var(--white);
-} 
-.dark-mode .hero h1 {
-  color: var(--white);
-}
-.dark-mode .lead-text {
-  color: var(--white);
-}
-
 
 a {
   color: var(--brown);
@@ -183,8 +255,6 @@ nav.navbar {
   transform: translateX(-10px);
 }
 
-
-
 .navbar .nav-link {
   color: var(--dark);
   font-weight: 600;
@@ -202,8 +272,8 @@ nav.navbar {
   align-items: center;
   padding: 30px 0;
   background: linear-gradient(120deg, var(--white), var(--cream));
-  
 }
+
 h2{
   color:var(--black);
   font-size: 16px;
@@ -219,7 +289,7 @@ h2{
   letter-spacing: 2px;
 }
 
-h1,h3,h4,h5,h6 {
+h1,h2,h3,h4,h5,h6 {
   color: var(--black);
   font-size: 24px;
   font-weight: 700;
@@ -272,7 +342,6 @@ h1,h3,h4,h5,h6 {
 .hero-name > h2 {
   grid-column: 1 / -1;
   margin: 0;
-  
 }
 
 .hero-name > p {
@@ -338,15 +407,6 @@ h1,h3,h4,h5,h6 {
   color: var(--brown-dark);
   font-size: 20px;
   font-weight: bold;
-}
-
-body.dark-theme .greeting-panel {
-  background-color: transparent;
-}
-
-body.dark-theme .greeting-panel label,
-body.dark-theme .greeting-message {
-  color: var(--white);
 }
 
 .btn,
@@ -545,36 +605,13 @@ input[type="submit"]:hover {
   font-weight: bold;
 }
 
-body.dark-theme .about-page {
-  background: linear-gradient(135deg, var(--black), var(--dark));
-}
-
-body.dark-theme .about-copy,
-body.dark-theme .about-highlight p {
-  color: var(--white);
-}
-
-body.dark-theme .about-highlight,
-body.dark-theme .about-badge {
-  background-color: var(--dark);
-  border-color: var(--brown-light);
-}
-
-body.dark-theme .about-badge strong,
-body.dark-theme .about-gallery-item p {
-  color: var(--white);
-}
-
 .contact-form {
   padding: 30px;
-  
-  background-color: var( --brown-light);
+  background-color: var(--brown-light);
   border: 1px solid var(--border);
   border-radius: 10px;
   box-shadow: var(--shadow);
 }
-
-
 
 .contact-alert {
   display: none;
@@ -649,6 +686,7 @@ body.dark-theme .contact-alert.failed {
   grid-template-columns: 1fr 1fr;
   gap: 15px;
 }
+
 .clients-section {
   min-height: 70vh;
   display: flex;
@@ -670,8 +708,7 @@ body.dark-theme .contact-alert.failed {
   border-radius: 0%;
   object-fit: cover;
   border-radius: 50%;
-  margin:0 auto;
-  
+  margin: 0 auto;
 }
 
 .client-review {
@@ -680,14 +717,6 @@ body.dark-theme .contact-alert.failed {
   color: var(--dark);
   font-size: 24px;
   font-weight: 600;
-}
-
-body.dark-theme .clients-section {
-  background-color: var(--black);
-}
-
-body.dark-theme .client-review {
-  color: var(--white);
 }
 
 .projects-section {
@@ -715,11 +744,10 @@ body.dark-theme .client-review {
 }
 
 .projects-carousel-img {
-    width: 700px;
-    height: 600px;
-    object-fit: cover;
-    border-radius: 10px;
-
+  width: 700px;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .projects-carousel-caption h2 {
@@ -747,113 +775,26 @@ body.dark-theme .client-review {
 }
 
 #projectsCarousel .carousel-indicators [data-bs-target] {
- background-color: var(--shadow);
+  background-color: var(--shadow);
 }
 
-body.dark-theme .projects-section {
-  background: linear-gradient(135deg, var(--black), var(--dark));
-}
-
-body.dark-theme #projectsCarousel .carousel-item {
-  background-color: var(--dark);
-  border-color: var(--brown-light);
-}
-
-body.dark-theme .project-carousel-caption h2,
-body.dark-theme .project-carousel-caption p {
-  color: var(--white);
-}
 .card { transition: transform 0.2s; cursor: pointer; }
 .card:hover { transform: translateY(-8px); box-shadow: 0 12px 24px rgba(0,0,0,0.15) !important; }
-
-@media (max-width: 768px) {
-
-  .hero-header {
-    font-size: 26px;
-  }
-
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px 25px;
-  }
-
-  nav ul {
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  .hero {
-    text-align: center;
-    padding: 40px 20px;
-  }
-
-  .hero h1 {
-    font-size: 42px;
-  }
-
-  .lead-text {
-    font-size: 20px;
-  }
-
-  .about-layout {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .about-intro h2 {
-    font-size: 40px;
-  }
-
-  .about-copy {
-    font-size: 18px;
-  }
-
-  .about-portrait {
-    min-height: auto;
-  }
-
-  .about-profile-image {
-    height: 360px;
-  }
-
-  .about-badge {
-    position: static;
-    margin-top: -40px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .about-highlights,
-  .about-gallery {
-    grid-template-columns: 1fr;
-  }
-
-  #projectsCarousel .carousel-item {
-    min-height: 520px;
-    padding: 22px 18px 68px;
-  }
-
-  .project-carousel-img {
-    height: 260px;
-  }
-
-  .project-carousel-caption h2 {
-    font-size: 28px;
-  }
-
 
 .services-page {
   padding: 30px 0 60px;
 }
+
 .services-header-block {
   margin-bottom: 24px;
 }
+
 .service-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
 }
+
 .service-card {
   background: var(--brown-dark);
   color: var(--white);
@@ -863,20 +804,24 @@ body.dark-theme .project-carousel-caption p {
   box-shadow: 0 10px 30px rgba(0,0,0,0.25);
   transition: transform 220ms ease, box-shadow 220ms ease;
 }
+
 .service-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 28px 60px rgba(0,0,0,0.32);
 }
+
 .service-title {
   margin: 0 0 6px;
   font-size: 20px;
   font-weight: 700;
   color: var(--cream);
 }
+
 .service-summary {
   margin: 0 0 12px;
   color: var(--cream);
 }
+
 .service-details {
   max-height: 0;
   overflow: hidden;
@@ -884,10 +829,12 @@ body.dark-theme .project-carousel-caption p {
   padding: 0 0;
   color: var(--cream);
 }
+
 .service-card.open .service-details {
   max-height: 260px;
   padding-top: 8px;
 }
+
 .service-actions {
   display: flex;
   gap: 10px;
@@ -917,55 +864,83 @@ body.dark-theme .project-carousel-caption p {
   align-items: center;
   justify-content: center;
   font-style: italic;
-
-  .services-nav-buttons {
-    display: flex;
-    gap: 12px;
-    margin: 40px 0 30px;
-    justify-content: flex-start;
-  }
   margin: 0;
 }
 
-body.dark-theme .quote-section {
-  background: linear-gradient(135deg, #3d1f35, #291642);
-}
-
-body.dark-theme .quote-text {
-  color: var(--cream);
+.services-nav-buttons {
+  display: flex;
+  gap: 12px;
+  margin: 40px 0 30px;
+  justify-content: flex-start;
 }
 
 @media (max-width: 992px) {
   .service-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
 @media (max-width: 600px) {
   .service-grid { grid-template-columns: 1fr; }
 }
 
+@media (max-width: 768px) {
+  .hero-header { font-size: 26px; }
 
-  .project-carousel-caption p {
-    font-size: 18px;
-  }
-
-  .hero-cta {
-    justify-content: center;
-  }
-
-  .profile-greeting {
+  nav {
     flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 25px;
   }
+
+  nav ul { flex-wrap: wrap; gap: 12px; }
+
+  .hero {
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero h1 { font-size: 42px; }
+  .lead-text { font-size: 20px; }
+
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-intro h2 { font-size: 40px; }
+  .about-copy { font-size: 18px; }
+  .about-portrait { min-height: auto; }
+  .about-profile-image { height: 360px; }
+
+  .about-badge {
+    position: static;
+    margin-top: -40px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-highlights,
+  .about-gallery { grid-template-columns: 1fr; }
+
+  #projectsCarousel .carousel-item {
+    min-height: 520px;
+    padding: 22px 18px 68px;
+  }
+
+  .project-carousel-img { height: 260px; }
+  .project-carousel-caption h2 { font-size: 28px; }
+  .project-carousel-caption p { font-size: 18px; }
+  .hero-cta { justify-content: center; }
+  .profile-greeting { flex-direction: column; }
 
   .greeting-panel {
     width: 100%;
     max-width: 320px;
     margin-left: 0;
     text-align: left;
-    margin-top:auto;
+    margin-top: auto;
   }
 
-  .form-row {
-    grid-template-columns: 1fr;
-  }
+  .form-row { grid-template-columns: 1fr; }
 
   .reveal {
     opacity: 0;
@@ -978,4 +953,3 @@ body.dark-theme .quote-text {
     transform: translateY(0);
   }
 }
-

@@ -38,26 +38,6 @@ function startClock() {
     setInterval(updateTime, 1000);
 }
 
-
-function themeToggle() {
-    var body = document.body;
-    body.classList.toggle("dark-theme");
-    const themeToggleBtn = document.getElementById("themeTogglebtn") || document.getElementById("themeToggleBtn");  
-    if (body.classList.contains("dark-theme")) {
-        localStorage.setItem("theme", "dark");
-        if (themeToggleBtn) {
-            themeToggleBtn.textContent = "Light";
-        }
-    } else {
-        localStorage.setItem("theme", "light");
-        if (themeToggleBtn) {
-            themeToggleBtn.textContent = "Dark";
-        }
-    }
-}
-
-
-
 function toggleMenu() {
     const nav = document.querySelector("nav ul");
     if (nav) {
@@ -103,12 +83,28 @@ document.addEventListener("DOMContentLoaded", function() {
             contactForm.reset();
         });
     }
+
+   
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "dark") {
         document.body.classList.add("dark-theme");
     }
+
     
-    
+    const themeToggleBtn = document.getElementById("themeTogglebtn");
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener("click", function() {
+            document.body.classList.toggle("dark-theme");
+            if (document.body.classList.contains("dark-theme")) {
+                localStorage.setItem("theme", "dark");
+                themeToggleBtn.textContent = "Light";
+            } else {
+                localStorage.setItem("theme", "light");
+                themeToggleBtn.textContent = "Dark";
+            }
+        });
+    }
+
     const menuToggleBtn = document.getElementById("menu");
     if (menuToggleBtn) {
         menuToggleBtn.addEventListener("click", toggleMenu);
@@ -174,17 +170,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
 
-          
             if (alertEl) { alertEl.textContent = 'Request sent — thank you! I will respond by email.'; alertEl.className = 'text-success'; }
 
-          
             setTimeout(function () {
                 const modalEl = document.getElementById('contactModal');
                 if (modalEl) {
                     const modal = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
                     modal.hide();
                 }
-              
                 const form = document.getElementById('quoteForm');
                 if (form) form.reset();
             }, 900);
