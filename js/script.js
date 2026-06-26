@@ -58,7 +58,6 @@ function themeToggle() {
 
 
 
-
 function toggleMenu() {
     const nav = document.querySelector("nav ul");
     if (nav) {

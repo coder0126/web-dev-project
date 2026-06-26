@@ -665,11 +665,13 @@ body.dark-theme .contact-alert.failed {
 }
 
 .client-carousel-img {
-  width: 220px;
-  height: 220px;
-  margin: 0 auto 24px;
-  border-radius: 50%;
+  width: 400px;
+  height: 350px;
+  border-radius: 0%;
   object-fit: cover;
+  border-radius: 50%;
+  margin:0 auto;
+  
 }
 
 .client-review {
@@ -712,23 +714,22 @@ body.dark-theme .client-review {
   box-shadow: var(--shadow);
 }
 
-.project-carousel-img {
-  width: min(100%, 620px);
-  height: 340px;
-  margin: 0 auto 28px;
-  border-radius: 8px;
-  object-fit: cover;
-  image-rendering: auto;
+.projects-carousel-img {
+    width: 700px;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+
 }
 
-.project-carousel-caption h2 {
+.projects-carousel-caption h2 {
   margin-bottom: 12px;
   color: var(--black);
   font-size: 34px;
   font-weight: 800;
 }
 
-.project-carousel-caption p {
+.projects-carousel-caption p {
   max-width: 620px;
   margin: 0 auto;
   color: var(--dark);
@@ -746,7 +747,7 @@ body.dark-theme .client-review {
 }
 
 #projectsCarousel .carousel-indicators [data-bs-target] {
-  background-color: var(--brown);
+ background-color: var(--shadow);
 }
 
 body.dark-theme .projects-section {
