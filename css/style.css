@@ -20,6 +20,11 @@ body {
   line-height: 1.6;
   
 }
+.button{
+  background-color: #6f2b62;
+  font-family:'Playfair Display',serif;
+  color:#fee2e2;
+}
 .main-header {
   display: flex;
   align-items: center;
