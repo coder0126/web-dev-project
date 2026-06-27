@@ -736,17 +736,16 @@ body.dark-theme .contact-alert.failed {
   min-height: 560px;
   padding: 28px 80px 70px;
   text-align: center;
-  background-color: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  box-shadow: var(--shadow);
+  background-color:transparent;
+  border:none;
+  box-shadow:none;
 }
 
 .projects-carousel-img {
-  width: 700px;
-  height: 600px;
+  width: 400px;
+  height: 400px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .projects-carousel-caption h2 {
@@ -766,15 +765,19 @@ body.dark-theme .contact-alert.failed {
 
 #projectsCarousel .carousel-control-prev,
 #projectsCarousel .carousel-control-next {
-  width: 64px;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--brown-dark);
+  border-radius: 50%;
+  opacity: 1
 }
 
-#projectsCarousel .carousel-indicators {
-  margin-bottom: 18px;
-}
 
 #projectsCarousel .carousel-indicators [data-bs-target] {
-  background-color: var(--brown);
+  background-color: var();
+  block-size: 0%;
 }
 
 .card {
