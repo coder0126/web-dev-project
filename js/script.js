@@ -94,15 +94,15 @@ document.addEventListener("DOMContentLoaded", function() {
   
     const themeToggleBtn = document.getElementById("themeTogglebtn");
     if (themeToggleBtn) {
-        themeToggleBtn.textContent = savedTheme === "dark" ? "Light" : "Dark";
+        themeToggleBtn.textContent = savedTheme === "⭐" ? "🌸" : "⭐";
         themeToggleBtn.addEventListener("click", function() {
             document.body.classList.toggle("dark-theme");
             if (document.body.classList.contains("dark-theme")) {
-                localStorage.setItem("theme", "dark");
-                themeToggleBtn.textContent = "Light";
+                localStorage.setItem("theme", "⭐");
+                themeToggleBtn.textContent = "🌸";
             } else {
-                localStorage.setItem("theme", "light");
-                themeToggleBtn.textContent = "Dark";
+                localStorage.setItem("theme", "🌸");
+                themeToggleBtn.textContent = "⭐";
             }
         });
     }
