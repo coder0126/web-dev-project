@@ -3,26 +3,27 @@
 
 :root {
   --white: #ffffff;
-  --cream: #fde8f4; 
+  --cream: #fbc3b9;
   --black: #111111;
-  --dark: #2b1226; 
-  --brown: #6f2b62;
-  --brown-dark: #48132f; 
-  --brown-light: #f3a6c6; 
-  --border: #ffff;
-  --shadow: 0 14px 35px rgba(17, 17, 17, 0.12);} 
+  --dark: #4f252a;
+  --brown: #e06464;
+  --brown-dark: #4f252a;
+  --brown-light: #f1745e;
+  --border: #edd0ac;
+  --shadow: 0 14px 35px rgba(17, 17, 17, 0.12);
+}
 
 body {
   margin: 0;
   font-family: 'Playfair Display', serif;
-  color: var(--white);
-  background-color: var(--brown-light);
+  color: var(--black);
+  background-color: #fbc3b9;
   line-height: 1.6;
-  cursor:pointer;
-  
+  cursor: pointer;
 }
+
 .button{
-  background-color: #6f2b62;
+  background-color: #e06464;
   font-family:'Playfair Display',serif;
   color:#fee2e2;
 }
@@ -31,10 +32,9 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 10px 38px;
-  background-color: var(--brown-light);
+  background-color: var(--cream);
   border-bottom: 1px solid var(--border);
 }
-
 
 .hero-header {
   flex: 1 1 260px;
@@ -149,7 +149,7 @@ body.dark-theme .btn-outline-primary {
 }
 
 body.dark-theme .btn-outline-accent:hover,
-body.dark-theme .btn-outline-primary:hover { 
+body.dark-theme .btn-outline-primary:hover {
   background-color: var(--brown-light);
   border-color: var(--brown-light);
   color: var(--white);
@@ -222,11 +222,11 @@ img {
   max-width: 100%;
   height: auto;
   width: 200px;
-  height: 250px;    
-  border-radius: 50%;  
-  object-fit: cover; 
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
   image-rendering: pixelated;
-  box-shadow: #4d2f19 0px 4px 8px, #4d2f19 0px 6px 20px;  
+  box-shadow: #4d2f19 0px 4px 8px, #4d2f19 0px 6px 20px;
 }
 
 a {
@@ -265,7 +265,7 @@ nav.navbar {
   color: var(--brown);
 }
 
-.hero-header h1{
+.hero-header h1 {
   min-height: 45vh;
   border-inline-end-color: #111111;
   display: flex;
@@ -274,12 +274,12 @@ nav.navbar {
   background: linear-gradient(120deg, var(--white), var(--cream));
 }
 
-h2{
-  color:var(--black);
+h2 {
+  color: var(--black);
   font-size: 16px;
   font-weight: 350;
   text-align: right;
-  transform:translateX(-20)
+  transform: translateX(-20);
 }
 
 .eyebrow {
@@ -521,7 +521,7 @@ input[type="submit"]:hover {
   max-width: 240px;
   padding: 16px 18px;
   background-color: var(--white);
-  border-left: 6px solid #0e7490;
+  border-left: 6px solid #e06464;
   box-shadow: var(--shadow);
 }
 
@@ -556,11 +556,11 @@ input[type="submit"]:hover {
 }
 
 .about-highlight:nth-child(2) {
-  border-top-color: #0e7490;
+  border-top-color: #e06464;
 }
 
 .about-highlight:nth-child(3) {
-  border-top-color: #be123c;
+  border-top-color: #4f252a;
 }
 
 .about-highlight span {
@@ -607,7 +607,7 @@ input[type="submit"]:hover {
 
 .contact-form {
   padding: 30px;
-  background-color: var(--brown-light);
+  background-color: var(--cream);
   border: 1px solid var(--border);
   border-radius: 10px;
   box-shadow: var(--shadow);
@@ -673,7 +673,7 @@ body.dark-theme .contact-alert.failed {
 .form-group textarea:focus {
   outline: none;
   border-color: var(--brown);
-  box-shadow: 0 0 0 3px rgba(123, 79, 44, 0.18);
+  box-shadow: 0 0 0 3px rgba(224, 100, 100, 0.18);
 }
 
 .form-group textarea {
@@ -705,7 +705,6 @@ body.dark-theme .contact-alert.failed {
 .client-carousel-img {
   width: 400px;
   height: 350px;
-  border-radius: 0%;
   object-fit: cover;
   border-radius: 50%;
   margin: 0 auto;
@@ -775,11 +774,18 @@ body.dark-theme .contact-alert.failed {
 }
 
 #projectsCarousel .carousel-indicators [data-bs-target] {
-  background-color: var(--shadow);
+  background-color: var(--brown);
 }
 
-.card { transition: transform 0.2s; cursor: pointer; }
-.card:hover { transform: translateY(-8px); box-shadow: 0 12px 24px rgba(0,0,0,0.15) !important; }
+.card {
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15) !important;
+}
 
 .services-page {
   padding: 30px 0 60px;
@@ -826,7 +832,7 @@ body.dark-theme .contact-alert.failed {
   max-height: 0;
   overflow: hidden;
   transition: max-height 320ms ease, padding 220ms ease;
-  padding: 0 0;
+  padding: 0;
   color: var(--cream);
 }
 
