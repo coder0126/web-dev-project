@@ -64,6 +64,7 @@ function getQuote() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
+
     const contactForm = document.getElementById("contactForm");
     if (contactForm) {
         contactForm.addEventListener("submit", function (event) {
@@ -84,15 +85,16 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-   
+ 
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "dark") {
         document.body.classList.add("dark-theme");
     }
 
-    
+  
     const themeToggleBtn = document.getElementById("themeTogglebtn");
     if (themeToggleBtn) {
+        themeToggleBtn.textContent = savedTheme === "dark" ? "Light" : "Dark";
         themeToggleBtn.addEventListener("click", function() {
             document.body.classList.toggle("dark-theme");
             if (document.body.classList.contains("dark-theme")) {
@@ -105,14 +107,9 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    const menuToggleBtn = document.getElementById("menu");
-    if (menuToggleBtn) {
-        menuToggleBtn.addEventListener("click", toggleMenu);
-    }
-
     const greetBtn = document.getElementById("greetBtn");
     if (greetBtn) {
-        greetBtn.addEventListener("click", function (event) {
+        greetBtn.addEventListener("click", function(event) {
             event.preventDefault();
             displayGreeting();
         });
@@ -122,21 +119,18 @@ document.addEventListener("DOMContentLoaded", function() {
     startClock();
 });
 
-console.log("Script loaded successfully.");
-
 function showContactAlert(type, message) {
     const contactAlert = document.getElementById("contactAlert");
     if (!contactAlert) {
         alert(message);
         return;
     }
-
     contactAlert.textContent = message;
     contactAlert.className = "contact-alert " + type;
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    
+
     document.querySelectorAll('.service-toggle').forEach(function(btn) {
         btn.addEventListener('click', function (e) {
             const card = btn.closest('.service-card');
@@ -184,3 +178,5 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+console.log("Script loaded successfully.");
