@@ -61,7 +61,7 @@ body.dark-theme header,
 body.dark-theme footer,
 body.dark-theme .contact-form {
   background-color: var(--dark);
-  color: var(--white);
+  color: var(--brown-dark);
 }
 
 body.dark-theme .hero,
